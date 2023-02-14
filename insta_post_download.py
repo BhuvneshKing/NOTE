@@ -14,4 +14,3 @@ selected_range = posts_sorted_by_likes[0:78]
 for post in selected_range:
     L.download_post(post, PROFILE)
 
-
