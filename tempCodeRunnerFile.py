@@ -1,0 +1,1 @@
+(((namevalue.get()).capitalize()))

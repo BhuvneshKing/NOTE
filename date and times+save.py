@@ -1,0 +1,55 @@
+hi=str(input("enter your name please\n"))
+mode=str(input("enter what you want?:....\n"))
+g=hi.capitalize()
+name=mode.capitalize()
+from tkinter import*
+import datetime
+x = datetime.datetime.now() 
+a=x.strftime("%x %A")
+b=x.strftime("%I:%M %p")
+c=x.strftime("%A")
+d=x.strftime("%H:%M")
+e=x.strftime("%C")
+f=(e,"century")
+#date
+if name =="Date":
+    me=Tk()
+    me.geometry("300x50")
+    me.title("Date")
+    melabel = Label(me,text=a,bg='White',font=("Times",30,'bold'))
+    melabel.pack(side=TOP)
+#time both in 12 and 24 Hrs
+elif name=="Time":
+    me=Tk()
+    me.geometry("170x50")
+    me.title("Time in 12 Hrs")
+    melabel = Label(me,text=b,bg='White',font=("Times",30,'bold'))
+    melabel.pack(side=TOP)
+    me=Tk()
+    me.geometry("100x50")
+    me.title("24 Hrs")
+    melabel = Label(me,text=d,bg='White',font=("Times",30,'bold'))
+    melabel.pack(side=TOP)
+#day
+elif name=="Day":
+    me=Tk()
+    me.geometry("170x50")
+    me.title("Time")
+    melabel = Label(me,text=c,bg='White',font=("Times",30,'bold'))
+    melabel.pack(side=TOP)
+#century
+elif name=="Century":
+    me=Tk()
+    me.geometry("180x50")
+    me.title("Century")
+    melabel = Label(me,text=f,bg='White',font=("Times",30,'bold'))
+    melabel.pack(side=TOP)
+f=open('game.txt','w')
+f.write("user name is:-")
+f.write("\n")
+f.write(g)
+f.write("\n")
+f.write("searching for:-")
+f.write("\n")
+f.write(name)
+f.close()
